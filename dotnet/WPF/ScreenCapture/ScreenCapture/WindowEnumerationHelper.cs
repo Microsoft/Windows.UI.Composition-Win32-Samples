@@ -148,7 +148,7 @@ namespace WPFCaptureSample
                 return false;
             }
 
-            var style = (WindowStyles)(uint)GetWindowLongPtr(hwnd, (int)GWL.GWL_STYLE).ToInt32();
+            var style = (WindowStyles)(uint)GetWindowLongPtr(hwnd, (int)GWL.GWL_STYLE).ToInt64();
             if (style.HasFlag(WindowStyles.WS_DISABLED))
             {
                 return false;
